@@ -62,7 +62,7 @@ def remove_noise(img, min_area = 150):
 def main():
     # tryout: frangi
     img = load_image("01_dr")
-    img = img >> green >> sub_morphed >> plot_image >> thresh >> plot_image >> remove_noise >> plot_image >> close(10) >> plot_image(True) 
+    img = img >> green >> sub_morphed >> thresh >> remove_noise >> close(10) >> plot_image(True) 
 
 if __name__ == "__main__":
     main()
